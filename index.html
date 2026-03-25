@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>将棋ゲーム（難易度選択AI付き）</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <h1>将棋ゲーム</h1>
+    <p class="subtitle">先手：あなた / 後手：CPU</p>
+
+    <div class="controls">
+      <label for="ai-level">CPUの強さ</label>
+      <select id="ai-level">
+        <option value="2ply">弱い(Lv.1)</option>
+        <option value="3ply">普通(Lv.2)</option>
+        <option value="alphabeta">強い(Lv.3)</option>
+      </select>
+      <button id="reset-btn" class="reset-btn">最初から</button>
+    </div>
+
+    <div class="panel top-panel">
+      <div class="hand-area">
+        <h2>後手の持ち駒</h2>
+        <div id="hand-gote" class="hand"></div>
+      </div>
+    </div>
+
+    <div id="status" class="status">対局開始</div>
+    <div id="board" class="board"></div>
+
+    <div class="panel bottom-panel">
+      <div class="hand-area">
+        <h2>先手の持ち駒</h2>
+        <div id="hand-sente" class="hand"></div>
+      </div>
+    </div>
+
+    <div class="info-row">
+      <div id="turn" class="turn"></div>
+    </div>
+  </div>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
